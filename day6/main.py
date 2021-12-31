@@ -1,14 +1,14 @@
-f = open("fishes.txt", "r")
-fishes = [int(i) for i in f.read().split(',')]
-for i in range(1,81):
-    new_fishes = 0
-    for fi in range(len(fishes)):
-        fishes[fi] -= 1
-        if fishes[fi] < 0:
-            fishes[fi] = 6
-            new_fishes += 1
-    fishes += [8]*new_fishes
-print("Day 6, part 1, answer:", len(fishes))
+# f = open("fishes.txt", "r")
+# fishes = [int(i) for i in f.read().split(',')]
+# for i in range(1,81):
+#     new_fishes = 0
+#     for fi in range(len(fishes)):
+#         fishes[fi] -= 1
+#         if fishes[fi] < 0:
+#             fishes[fi] = 6
+#             new_fishes += 1
+#     fishes += [8]*new_fishes
+# print("Day 6, part 1, answer:", len(fishes))
 
 f = open("fishes.txt", "r")
 fishes = [int(i) for i in f.read().split(',')]
@@ -19,7 +19,7 @@ for i in range(7):
         if fish == i:
             count += 1
     fish_per_day.append(count) 
-    
+
 child_fishes = [0,0] 
 for d in (range(256)):
     parent_fishes = fish_per_day[0] 
